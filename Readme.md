@@ -1,8 +1,26 @@
-# express
+# expressTemplate
 
-## 项目简介
+===
 
-这是一个 express 框架的后端接口项目
+## Papar Information
+
+- Title: `express模板项目`
+- Authors: `Jerry`
+
+## Install & Dependence
+
+- node js
+- mysql
+- npm
+
+## Use
+
+```cmd
+npm run dev
+npm start
+```
+
+两个命令都可以 区别是第一个有热重载
 
 ## 操作指南
 
@@ -12,18 +30,31 @@
 npm install
 ```
 
-2. 终端启动
+2. 修改 config 文件夹下的配置信息
+3. 终端启动
 
-```cmd
-npm run dev
-npm start
+## Directory Hierarchy
+
 ```
-
-两个命令都可以 区别是第一个有热重载
-
-3. 修改 config 文件夹下的文件
-4. 在 routes 文件下写代码
-
-## 项目需求
-
-需要用户安装 node.js mysql npm
+|—— .gitignore
+|—— app.js
+|—— bin
+|    |—— www 入口文件
+|—— config
+|    |—— connection.js
+|    |—— db.json 数据库配置
+|    |—— env.json 环境端口配置
+|—— file
+|    |—— ai_todo.sql 数据库脚本
+|—— LICENSE
+|—— node_modules 包
+|—— package-lock.json
+|—— package.json
+|—— public 公开目录
+|—— routes 路由配置
+|    |—— index.js
+|    |—— users.js
+|—— utils 脚手架
+|    |—— common.js
+|—— views
+```
