@@ -21,5 +21,9 @@ npm start
 
 两个命令都可以 区别是第一个有热重载
 
-3. 修改 configw 文件夹下的文件
+3. 修改 config 文件夹下的文件
 4. 在 routes 文件下写代码
+
+## 项目需求
+
+需要用户安装 node.js mysql npm
