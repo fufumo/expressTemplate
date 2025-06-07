@@ -15,7 +15,7 @@ router.get(`/api/article/list`, async (req, res) => {
     return res.send(u.er('页码或页大小错误', 101))
   }
 
-  const sql = `SELECT * FROM article order by create_at DESC, id DESC LIMIT ?,?`
+  const sql = `SELECT * FROM article order by create_time DESC, id DESC LIMIT ?,?`
   const [result] = await connection.query(sql, [(page - 1) * page_size, page_size])
   res.send(u.sc(result, result.length))
 })
