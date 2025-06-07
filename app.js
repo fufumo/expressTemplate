@@ -1,10 +1,11 @@
 const express = require('express')
 const path = require('path')
-
-const indexRouter = require('./routes/index')
-const usersRouter = require('./routes/users')
-
+const fs = require('fs')
 const app = express()
+
+// 设置视图引擎为 EJS
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // json
 app.use(express.json())
@@ -13,9 +14,12 @@ app.use(express.urlencoded({ extended: false }))
 // 静态文件目录
 app.use(express.static(path.join(__dirname, 'public')))
 
-// 主路由
-app.use(indexRouter)
-app.use(usersRouter)
+const routesPath = path.join(__dirname, 'routes')
+// 自动挂载 routes 文件夹下的所有路由
+fs.readdirSync(routesPath).forEach((file) => {
+  const route = require(path.join(routesPath, file))
+  app.use(route)
+})
 
 // 错误处理
 app.use((err, req, res, next) => {
