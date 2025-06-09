@@ -48,7 +48,7 @@ npm install
 |    |—— ai_todo.sql 数据库脚本
 |—— LICENSE
 |—— node_modules 包
-|—— package-lock.json
+|—— package-lock.json 
 |—— package.json
 |—— public 公开目录
 |—— routes 路由配置
@@ -56,5 +56,5 @@ npm install
 |    |—— users.js
 |—— utils 脚手架
 |    |—— common.js
-|—— views
+|—— views 视图
 ```
